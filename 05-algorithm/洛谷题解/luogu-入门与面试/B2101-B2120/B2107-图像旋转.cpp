@@ -1,5 +1,5 @@
 /*
- *@Description : B2106 矩阵转置
+ *@Description : B2107 图像旋转 
  *@Author : Zesheng Wang
  *@Date : 2022/11/3 14:09
  *@Version : 1.0
@@ -19,13 +19,11 @@ int main() {
             scanf("%d", &a[i][j]);
         }
     }
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
-            c[i][j] = a[j][i];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            c[j][n -i - 1] = a[i][j];
         }
     }	
-	
-	
 	
     // 输出结果
     for (int i = 0; i < m; i++) {
