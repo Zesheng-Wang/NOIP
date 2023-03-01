@@ -4,8 +4,9 @@ using namespace std;
 
 int main()
 {
-    int age = 10;
-    bool isEligible = age > 18 && age < 65;
-    // && || !
+    for (int i = 0; i < 5; i++)
+    {
+        cout << i << endl;
+    }
     return 0;
 }

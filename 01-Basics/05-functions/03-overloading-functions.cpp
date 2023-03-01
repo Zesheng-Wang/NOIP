@@ -13,5 +13,5 @@ void greet(string title, string name){
 int main() {
     cout << "Hello World!\n";
     greet("Mosh");
-
+    return 0;
 }
