@@ -1,5 +1,22 @@
 # 数据结构
     - 解决问题的方法和效率，和组织数据的方式是有关系的
+    - 逻辑结构
+    - 物理结构
+    - 抽象数据类型
+      - 数据类型
+        - 数据对象集
+        - 数据集合相关联的操作集
+      - 抽象
+        - 描述数据类型的方法不依赖具体实现 
+    - 矩阵
+      - 数据对象集 ： M*N的矩阵
+      - 操作集 : 
+        - Matrix Create(int M, int N)
+        - int GetMaxRow
+        - int GetMaxCol
+        - ElementType GetEntry
+        - Matrix Add(Matrix A, Matrix B)
+        - Matrix Multiply(Matrix A, Matrix B) 
 # 数据结构的种类
 - 表结构
     - 节点之间简单的先后次序关系 

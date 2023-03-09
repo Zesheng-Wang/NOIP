@@ -3,27 +3,32 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     int A[5][5], n = 5, i, j;
     for (i = 0; i < 5; i++)
         for (j = 0; j < 5; j++)
             cin >> A[i][j];
     bool flag = 0;
     int row, col;
-    for (row = 0; row < n; row++) {
+    for (row = 0; row < n; row++)
+    {
         col = 0;
-        for (j = 1; j < n; j++) {//���ҵ�row�����ֵ���к�
+        for (j = 1; j < n; j++)
+        {
             if (A[row][j] > A[row][col])
                 col = j;
         }
         flag = 1;
-        for (i = 0; i < n; i++) {//���ҵ�col����Сֵ���кţ�ȷ��A[row][col]�Ƿ�Ϊ����
-            if (A[i][col] < A[row][col]) {//A[row][col]���ǰ���
+        for (i = 0; i < n; i++)
+        {
+            if (A[i][col] < A[row][col])
+            {
                 flag = 0;
                 break;
             }
         }
-        if (flag) //A[row][col]�ǰ���
+        if (flag)
             break;
     }
     if (flag)

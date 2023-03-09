@@ -4,7 +4,8 @@ using namespace std;
 int bitManipulation1(int n, int m, int i)
 {
     // 在此处补充你的代码
-    return 
+
+    return;
 }
 
 int main()

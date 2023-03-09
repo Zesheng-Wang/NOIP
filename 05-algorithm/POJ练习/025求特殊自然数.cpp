@@ -59,3 +59,28 @@ int main()
 
     return 0;
 }
+/*
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+    for (int i = 82; i <= 342; i++)
+
+    {
+        if ((i / 49 == i % 9) && (i % 7 == i / 81))
+
+        {
+            cout << i << endl;
+
+            cout << i / 49 * 100 + i / 7 % 7 * 10 + i % 7 << endl;
+
+            cout << i % 7 * 100 + i / 7 % 7 * 10 + i / 49 << endl;
+        }
+    }
+
+    return 0;
+}
+*/
