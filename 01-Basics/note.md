@@ -27,4 +27,19 @@ while (scanf("%c", &c) != EOF){
 }
 ```
 
+# 5、处理无结束标记的OJ题目输入
+```c++
+while (scanf("%d", &n) != EOF){
+
+}
+
+while(cin >> n){
+
+}
+```
+# 6、用freopen重定向输入
+```c++
+freopen("c:\\tmp\\text.txt", "r", stdin);
+```
+
 
