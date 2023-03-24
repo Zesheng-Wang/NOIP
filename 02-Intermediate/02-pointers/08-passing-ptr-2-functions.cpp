@@ -1,16 +1,20 @@
 #include <iostream>
 using namespace std;
 
-void increasePrice(double price){
+void increasePrice(double price)
+{
     price *= 1.2;
 }
-void increasePrice1(double& price){
+void increasePrice1(double &price)
+{
     price *= 1.2;
 }
-void increasePrice2(double* price){
+void increasePrice2(double *price)
+{
     *price *= 1.2;
 }
-int main() {
+int main()
+{
     double price = 100;
     increasePrice(price);
     cout << price << endl;
