@@ -12,14 +12,15 @@ using namespace std;
 
 int main()
 {
-    int h;
-    double result, sum = 0;
-    scanf("%d", h);
-    for (int i = 0; i < 10; i++)
+    double h,s;
+    scanf("%lf", &h);
+    s = h;
+    for (int i = 2; i <= 10; i++)
     {
-        sum += h;
-        h *= 2;
+        s += h;
+        h /= 2;
     }
-    printf("%llf", sum);
+    h /= 2;
+    printf("%g\n%g", s,h);
     return 0;
 }
