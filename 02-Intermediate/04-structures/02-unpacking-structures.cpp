@@ -20,7 +20,7 @@ int main()
     int releaseYear = movie.releaseYear;
     bool isPopular = movie.isPopular;
     // c++ : structured binding
-    // js : destructuring
+    // js : destructuring  
     // python : unpacking
     // auto [t, r, p]{movie}; c++17之后才能使用的语法
     cout << title;
