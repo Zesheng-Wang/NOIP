@@ -8,13 +8,17 @@ int main()
 {
     char c, nc;
     cin >> c >> nc;
-    if (abs(int(c) - int(nc)) == 1)
+    if (nc != c)
     {
-        cout << "YES";
+        if (abs(int(c) - int(nc)) == 1)
+        {
+            cout << "YES";
+        }
+        else
+        {
+            cout << "NO";
+        }
     }
-    else
-    {
-        cout << "NO";
-    }
+
     return 0;
 }
