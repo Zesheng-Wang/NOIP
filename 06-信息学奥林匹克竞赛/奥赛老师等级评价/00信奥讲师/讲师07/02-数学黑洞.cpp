@@ -1,30 +1,41 @@
 #include <iostream>
 #include <algorithm>
-#include <string>
-
 using namespace std;
 
-int black_hole(int num)
+int blackHoleSteps(int number)
 {
     int steps = 0;
-    while (num != 6174 && steps <= 7)
+
+    while (number != 6174 && steps < 7)
     {
-        string num_str = to_string(num);
-        sort(num_str.begin(), num_str.end());
-        int min_num = stoi(num_str);
-        reverse(num_str.begin(), num_str.end());
-        int max_num = stoi(num_str);
-        num = max_num - min_num;
+        string strNum = to_string(number);
+
+        // 将数字转换为字符串，并在不足四位时在前面补零
+        while (strNum.length() < 4)
+        {
+            strNum = "0" + strNum;
+        }
+
+        // 对数字进行升序和降序排序
+        sort(strNum.begin(), strNum.end());
+        int ascendingNum = stoi(strNum);
+        sort(strNum.begin(), strNum.end(), greater<char>());
+        int descendingNum = stoi(strNum);
+
+        number = descendingNum - ascendingNum;
         steps++;
     }
+
     return steps;
 }
 
 int main()
 {
-    int c = 1234;
-    cin >> c;
-    int steps = black_hole(c);
+    int inputNumber;
+    cin >> inputNumber;
+
+    int steps = blackHoleSteps(inputNumber);
     cout << steps << endl;
+
     return 0;
 }
