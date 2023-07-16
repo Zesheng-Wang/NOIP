@@ -16,15 +16,21 @@ struct Movie
     string title;
     Date releaseDate;
     bool isPopular;
-
-    bool equals(const Movie &movie)
-    {
-        return (title == movie.title &&
-                releaseDate.year == movie.releaseDate.year &&
-                releaseDate.month == movie.releaseDate.month &&
-                releaseDate.day == movie.releaseDate.day);
-    }
 };
+
+bool operator==(const Movie &first, const Movie &second)
+{
+    return (first.title == second.title &&
+            first.releaseDate.year == second.releaseDate.year &&
+            first.releaseDate.month == second.releaseDate.month &&
+            first.releaseDate.day == second.releaseDate.day);
+}
+
+ostream &operator<<(ostream &stream, const Movie &movie)
+{
+    stream << movie.title;
+    return stream;
+}
 
 int main()
 {
@@ -34,7 +40,8 @@ int main()
     // second
     Movie movie1{"terminator",
                  {1984, 6, 1}};
-    if (movie1.equals(movie))
+    if (movie1 == movie)
         cout << "equal";
+    cout << movie1;
     return 0;
 }
