@@ -15,5 +15,7 @@ int main()
         cout << num1 * num2;
     else if (op == '/')
         cout << num1 / num2;
+    else
+        cout << "";
     return 0;
 }
